@@ -1,0 +1,2 @@
+npm install express fs-extra puppeteer-extra puppeteer-extra-plugin-stealth axios archiver
+node index.js
