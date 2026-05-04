@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CINEFy ULTIMATE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h2>⚡ CINEFy</h2>
+    <button class="nav active" data-tab="scan">SCAN</button>
+    <button class="nav" data-tab="explorer">EXPLORER</button>
+    <button class="nav" data-tab="logs">LOGS</button>
+  </aside>
+
+  <main>
+
+    <!-- SCAN -->
+    <section id="scan" class="tab active">
+      <input id="url" placeholder="https://target.com">
+      <button onclick="scan()">SCAN</button>
+      <span id="status"></span>
+      <a id="download" target="_blank"></a>
+
+      <div class="stats">
+        <div>Endpoints: <span id="stat-endpoints">0</span></div>
+        <div>GET: <span id="stat-get">0</span></div>
+        <div>POST: <span id="stat-post">0</span></div>
+      </div>
+
+      <canvas id="graph"></canvas>
+    </section>
+
+    <!-- EXPLORER -->
+    <section id="explorer" class="tab">
+      <div class="controls">
+        <input id="search" placeholder="Search..." oninput="filter()">
+        <select id="methodFilter" onchange="filter()">
+          <option value="">ALL</option>
+          <option>GET</option>
+          <option>POST</option>
+        </select>
+      </div>
+
+      <div class="split">
+        <div id="endpointList" class="list"></div>
+        <div id="details" class="details">Select endpoint</div>
+      </div>
+    </section>
+
+    <!-- LOGS -->
+    <section id="logs" class="tab">
+      <pre id="logBox"></pre>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
