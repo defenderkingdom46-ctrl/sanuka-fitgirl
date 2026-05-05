@@ -1,2 +1,40 @@
-npm install express fs-extra puppeteer-extra puppeteer-extra-plugin-stealth axios archiver
-node index.js
+bot/
+├── index.js                     
+
+├── core/
+│   ├── client.js               
+│   ├── handler.js              
+│   ├── pluginLoader.js         
+│   ├── router.js               
+
+├── plugins/
+│   ├── general/
+│   │    ├── ping.js
+│   │    ├── menu.js
+│   │    └── settings.js
+│   │
+│   ├── downloader/
+│   │    ├── yt.js
+│   │    ├── tt.js
+│   │    └── dl.js   
+
+│   ├── system/
+│   │    ├── restart.js
+│   │    ├── reload.js
+│   │    └── eval.js
+
+├── systems/
+│   ├── downloaderEngine.js    
+│   ├── settingsSystem.js       
+│   ├── replySystem.js          
+│   └── state.js                
+
+├── database/
+│   └── settings.json
+
+├── utils/
+│   ├── logger.js
+│   └── helpers.js
+
+├── config.js
+└── package.json
